@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'IBM Plex Sans Arabic', 'Cairo', 'Tajawal', sans-serif;
+
+}
+
+/* إعدادات أساسية */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff; /* خلفية داكنة */
+  color: white;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  color: white;
+}
+
+/* عنوان الصفحة */
+h5 {
+  color: #000000;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* تنسيق الكروت */
+.MuiCard-root {
+  background-color: rgb(29, 29, 29) ;
+  color: white ;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  will-change: transform , box-shadow;
+  border: 1px solid #006c78;
+  text-align: "center";
+  border-radius: 12px;
+  padding: "10px"
+}
+
+.MuiCard-root:hover {
+  transform: translateY(-8px) ;
+  box-shadow: 0px 0px 15px rgba(0, 108, 120, 0.9);
+}
+
+/* النصوص داخل الكروت */
+.MuiTypography-h6 {
+  font-size: 18px;
+  color: #cccccc;
+}
+
+.MuiTypography-h4 {
+  color: #006c78;
+  font-weight: bold;
+}
+
+/* الحاوية العامة */
+.MuiContainer-root {
+  padding-top: 60px !important;
+}
+.PastCompetitionsPage{
+  background-color:#008796 !important
+}
+
+.PastCompetitionsCard{
+  background-color:#008796 !important;
+  color: black !important;
+}
+
+.LeaderBoardCard{
+    background-color:#008796 !important;
+  color: black !important;
+
+}
+.pastCompetitionsBtn:hover{
+  transform: translateY(2%);
+  background-color: white;
+  color: #006c78;
+}
+
+
+.lastCompetetionBackBtn:hover{
+  transform: translateY(2%) ease;
+  background-color: #4b8e96;
+  color: white;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+.LeaderBoardCard{
+      border: "1px solid #ddd" !important;
+
+}

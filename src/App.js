@@ -1,0 +1,98 @@
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Login from "./Pages/Auth/Login";
+import Signup from "./Pages/Auth/Signup";
+import LandingPage from "./Pages/Landing/LandingPage";
+import DashboardHome from "./Pages/Dashboard/DashboardHome";
+
+import AlgorithmDetail from "./Pages/Algorithms/AlgorithmDetail";
+
+import { ContestRoutes } from "./Routes/ContestRoute";
+import { ProblemRoutes } from "./Routes/ProblemRoute";
+import { UserRoutes } from "./Routes/UserRoute";
+
+import { ProblemRequestRoutes } from "./Routes/ProblemRequestRoute";
+import { SubmissionRoutes } from "./Routes/SubmissionRoute";
+
+import Layout from "./Pages/Contest/Layout";
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/dashboard" element={<DashboardHome />} />
+        <Route path="/algorithm/:id" element={<AlgorithmDetail />} />
+        <Route path="/contest" element={<Layout/>}/>
+
+        {ContestRoutes}
+        {ProblemRoutes} 
+        {ProblemRequestRoutes}
+        {UserRoutes}
+        {SubmissionRoutes}
+
+
+        {/* <Route
+          path="/userprofile"
+          element={
+            <PrivateRoute>
+              <UserProfile />
+            </PrivateRoute>
+          }
+        /> */}
+
+        {/* <Route
+          path="/addproblemproposal"
+          element={
+            <PrivateRoute>
+              <AddProblemProposal />
+            </PrivateRoute>
+          }
+        /> */}
+
+        {/* <Route
+          path="/usersubmissions"
+          element={
+            <PrivateRoute>
+              <UserSubmissions />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/submission/:id"
+          element={
+            <PrivateRoute>
+              <SubmissionDetail />
+            </PrivateRoute>
+          }
+        /> */}
+
+        {/* <Route
+          path="/admin/dashboard"
+          element={
+            <AdminRoute>
+              <h2>Admin Dashboard</h2>
+            </AdminRoute>
+          }
+        /> */}
+
+        {/* <Route
+          path="/admin/manageproblems"
+          element={
+            <AdminRoute>
+              <h2>Manage Problems (Admin)</h2>
+            </AdminRoute>
+          }
+        /> */}
+
+        <Route path="/not-authorized" element={<h2>Not Authorized</h2>} />
+        <Route path="*" element={<h2>Page Not Found</h2>} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
