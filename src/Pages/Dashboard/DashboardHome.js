@@ -11,6 +11,7 @@ import ProblemsList from "../Problems/ProblemsList";
 import Algorithms from "../Algorithms/Algorithms";
 import { fetchNotificationsByUser, getUnreadNotificationsCount } from "../../Service/NotificationServices";
 import Layout from "../Contest/Layout";
+import ShareProblemLayout from "../shareProblem/shareProblemLayout";
 import {
   Bell,
   Award,
@@ -788,7 +789,7 @@ const DashboardHome = () => {
             ) : activeTab === "algorithms" ? (
               <Algorithms />
             ) :activeTab==="contests"?(
-              <Layout/>
+              <ShareProblemLayout/>
             ):(
               <section
                 key={activeTab}
@@ -851,4 +852,3 @@ const DashboardHome = () => {
 };
 
 export default DashboardHome;
-
