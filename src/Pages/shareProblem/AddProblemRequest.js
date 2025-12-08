@@ -125,7 +125,6 @@ const AddProblemRequest = () => {
         requestproblemTags: tags,
       };
 
-      // 🔹 إرسال الطلب
       const data = await addProblemRequest(payload);
 
       Swal.fire({
